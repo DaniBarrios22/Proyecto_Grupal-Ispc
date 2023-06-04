@@ -3,8 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 
 from rest_framework import viewsets
-from .serializer import CourseSerializer, UserSerializer, TeacherSerializer
-from .models import Course, User, Teacher
+from .serializer import CourseSerializer, UserSerializer, TeacherSerializer, StudentSerializer
+from .models import Course, User, Teacher, Student
 
 
 class CourseViewSet(viewsets.ModelViewSet):
@@ -18,3 +18,7 @@ class UserViewSet(viewsets.ModelViewSet):
 class TeacherViewSet(viewsets.ModelViewSet):
  queryset=Teacher.objects.all()
  serializer_class= TeacherSerializer 
+ 
+class StudentViewSet(viewsets.ModelViewSet):
+ queryset=Student.objects.all()
+ serializer_class= StudentSerializer 
