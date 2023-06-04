@@ -130,8 +130,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 #CAPACIT
 #que otro servidor se puede conectar? o sea el frontend angular
 #quien puede conectarse a nuestro servidor
+#CORS_ALLOWED_ORIGINS = [
+#    "http://127.0.0.1:9000", #esta no es la url de angular por lo q la cambiaremos proximamente
+#]
+
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:9000", #esta no es la url de angular por lo q la cambiaremos proximamente
+    'http://localhost',
 ]
 
 REST_FRAMEWORK = {
