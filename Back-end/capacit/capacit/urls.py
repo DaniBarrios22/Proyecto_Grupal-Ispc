@@ -19,11 +19,13 @@ from django.urls import path, include
 from rest_framework import routers
 
 
+router = routers.DefaultRouter()
 
 urlpatterns = [
     path("admin/", admin.site.urls),
 
-# Api routes
-#   path("capacit/", include ("appcapacit.urls")),
-#   path("capacit/", include (router.urls)),
+#Api routes
+   path("capacit/", include ("appcapacit.urls")),
+   path("capacit/", include (router.urls)),
 ]
+

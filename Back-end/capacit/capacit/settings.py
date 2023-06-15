@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "coreapi",#modulo para documentar los endpoints
-    "appcapacit"
+    "appcapacit",
+    "corsheader.middleware.CorsMiddleware"
 ]
 
 MIDDLEWARE = [
@@ -152,3 +153,7 @@ CORS_ALLOWED_ORIGINS = [
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }
+
+CORS_ORIGIN_WHITELIST = [ "http://localhost:3000" ]
+
+CORS_ALLOWED_CREDENTIALS = True
