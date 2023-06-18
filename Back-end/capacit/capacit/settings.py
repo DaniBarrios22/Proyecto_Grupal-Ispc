@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "coreapi",#modulo para documentar los endpoints
     "appcapacit",
-    "knox",
+    "knox"
 ]
 
 MIDDLEWARE = [

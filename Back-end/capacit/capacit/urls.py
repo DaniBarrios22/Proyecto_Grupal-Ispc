@@ -20,6 +20,6 @@ from knox import views as knox_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('api/auth/', include('appcapacit.urls')),##agregams
+    path('api/v1/', include('appcapacit.urls')),##agregams
 ]
 
