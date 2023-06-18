@@ -1,19 +1,26 @@
 #from django.shortcuts import render
 #Create yuor views here.
-from rest_framework import viewsets
+
 #importar curso aqui model  curso
+
+from rest_framework import viewsets
+
+#from .serializer import CourseSerializer
+from .models import Course
 
 #--user
 from rest_framework import generics, permissions
 from rest_framework.response import Response
 from knox.models import AuthToken
-from .serializer import UserSerializer, RegisterSerializer
+from .serializer import CourseSerializer, UserSerializer, RegisterSerializer
 #--User
 from django.contrib.auth import login
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from knox.views import LoginView as KnoxLoginView
 
-
+class CourseViewSet(viewsets.ModelViewSet):
+  queryset=Course.objects.all()
+  serializer_class= CourseSerializer
 
 # --------API usuario
 class RegisterAPI(generics.GenericAPIView):

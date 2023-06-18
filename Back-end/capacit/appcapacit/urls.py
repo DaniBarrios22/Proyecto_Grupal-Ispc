@@ -1,12 +1,16 @@
 from django.urls import path, include
 from rest_framework import routers
 
+#from Course.views import CourseViewSet
+from appcapacit  import views
+
 from .views import RegisterAPI
 from knox import views as knox_views
 from .views import LoginAPI
 
+
 router= routers.DefaultRouter()
-#router.register(r'',views.CursoViewSet)
+#router.register(r'Course',views.CourseViewSet)
 
 #---
 urlpatterns = [

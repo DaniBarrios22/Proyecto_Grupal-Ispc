@@ -9,6 +9,9 @@ class Course(models.Model):
     tag_1 = models.CharField (max_length=45)
     tag_2 = models.CharField (max_length=45)
     link = models.CharField (max_length=45)
+
+    def __str__(self):
+        return "{} {} {}".format(self.id_course, self.name, self.languaje)
     
 
 
